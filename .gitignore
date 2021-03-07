@@ -37,7 +37,6 @@ bower_components
 
 # Compiled 
 dist
-public
 *.zip
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
@@ -70,3 +69,8 @@ globalConfigMongo.json
 .vscode/settings.json
 
 output
+
+# eleventy compiled
+src/assets
+src/public
+src/includes

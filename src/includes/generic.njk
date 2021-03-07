@@ -1,0 +1,29 @@
+{% extends 'template.njk' %}
+
+{% block pageTitle %}
+  {{ title }} | Visa and Immigration Service
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="/public/app.min.css">
+  {% block styles %}
+  {% endblock %}
+{% endblock %}
+
+
+{% block main %}
+  <div class="kbrinl-width-container {{ containerClasses }}">
+    {% block beforeContent %}{% endblock %}
+    <main class="kbrinl-main-wrapper app-prose-scope {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="/public/all.js"></script>
+  <script>window.KBRINLFrontend.initAll()</script>
+{% endblock %}
+

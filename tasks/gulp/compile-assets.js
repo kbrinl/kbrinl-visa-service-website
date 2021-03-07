@@ -5,12 +5,19 @@ const rename = require('gulp-rename')
 const postcss = require('gulp-postcss')
 const postcssNormalize = require('postcss-normalize')
 const cssnano = require('cssnano')
+const stylelint = require('gulp-stylelint')
 sass.compiler = require('node-sass')
 const logger = require('gulp-logger')
 
 gulp.task('compile:scss', () => {
   const src = 'src/_scss/index.scss'
   return gulp.src(src)
+    .pipe(stylelint({
+      failAfterError: true,
+      reporters: [
+        { formatter: 'string', console: true }
+      ]
+    }))
     .pipe(logger({
       before: 'Compiling SCSS ' + src,
       after: 'Compiling complete'

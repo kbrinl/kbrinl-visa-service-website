@@ -71,6 +71,4 @@ globalConfigMongo.json
 output
 
 # eleventy compiled
-src/assets
-src/public
 src/includes

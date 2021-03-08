@@ -3,7 +3,7 @@ const clean = require('gulp-clean')
 const logger = require('gulp-logger')
 
 gulp.task('clean', () => {
-  const toDelete = ['dist', 'src/public', 'src/assets', 'src/includes']
+  const toDelete = ['dist']
 
   return gulp.src(toDelete, { allowEmpty: true })
     .pipe(logger({

@@ -10,7 +10,7 @@ sass.compiler = require('node-sass')
 const logger = require('gulp-logger')
 
 gulp.task('compile:scss', () => {
-  const src = 'src/_scss/index.scss'
+  const src = 'src/scss/index.scss'
   return gulp.src(src)
     .pipe(stylelint({
       failAfterError: true,
@@ -33,5 +33,5 @@ gulp.task('compile:scss', () => {
       basename: 'app',
       extname: '.min.css'
     }))
-    .pipe(gulp.dest('src/public'))
+    .pipe(gulp.dest('dist/assets'))
 })

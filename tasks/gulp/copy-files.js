@@ -1,8 +1,8 @@
 const gulp = require('gulp')
 
 gulp.task('copy:assets', () => {
-  return gulp.src('src/_assets/**/*')
-    .pipe(gulp.dest('src/assets'))
+  return gulp.src('src/assets/**/*')
+    .pipe(gulp.dest('dist/assets'))
 })
 
 gulp.task('copy:includes', () => {
@@ -12,12 +12,12 @@ gulp.task('copy:includes', () => {
 
 gulp.task('copy:kbrinl-frontend-js', () => {
   return gulp.src('node_modules/kbrinl-frontend/kbrinl/all.js')
-    .pipe(gulp.dest('src/public'))
+    .pipe(gulp.dest('dist/assets'))
 })
 
 gulp.task('copy:kbrinl-frontend-assets', () => {
   return gulp.src('node_modules/kbrinl-frontend/kbrinl/assets/**/*')
-    .pipe(gulp.dest('src/assets'))
+    .pipe(gulp.dest('dist/assets'))
 })
 
 gulp.task('copy:kbrinl-frontend-includes', () => {
